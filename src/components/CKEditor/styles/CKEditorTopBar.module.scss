@@ -1,0 +1,44 @@
+@import '~stylesheets/base/base';
+
+.titleContainer {
+  @extend %inline-block;
+  margin: 0 50px 0 0;
+  width: 100%;
+
+  .suggested-title {
+    @extend %lato, %fw600;
+  
+    font-size: 20px;
+    color: $emperor;
+  }
+  
+  .suggested-subtitle {
+    @extend %lato;
+  
+    font-size: 14px;
+    color: $emperor;
+  }
+  
+  .titleInput {
+    font-size: 25px;
+    line-height: 1.4;
+    display: block;
+    width: 100%;
+    color: $purple;
+    border-radius: 3px;
+    background-color: $white-lilac2;
+    background-image: url('../../../assets/images/pencil-icon.svg');
+    background-position: center right 22px;
+    background-repeat: no-repeat;
+    background-size: 13px 15px;
+    border: solid 1px transparent;
+    padding: 15px 58px 15px 17px;
+    outline: none;
+    @extend %robotoslab, %fw400, %text-left;
+
+    &:focus {
+      border: solid 1px $lavender-purple3;
+      background-image: url('../../../assets/images/pencil-icon-focus.svg');
+    }
+  }
+}

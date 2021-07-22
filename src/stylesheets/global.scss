@@ -1,0 +1,25 @@
+/* base */
+@import './base/base';
+
+$fa-font-path: '~font-awesome/fonts';
+$fa-version: '4.7.0' !default;
+
+/* webfonts - Font Awesome */
+@import '../../node_modules/font-awesome/scss/path';
+
+/* webfonts - Lato & Robots Slab */
+@import './vendors/webfonts';
+
+/* vendors */
+@import './vendors/normalize';
+
+/* Font Awesome - class list render */
+@import '../../node_modules/font-awesome/scss/font-awesome';
+
+/* Breakpoint */
+@import '../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+/* import react editor scss files here */
+@import './common';
+@import './container';
+@import './tinymce';

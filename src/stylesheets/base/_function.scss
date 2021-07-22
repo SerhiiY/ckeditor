@@ -1,0 +1,29 @@
+@function span($span, $spanbase: $base-columns) {
+  @return percentage($span / $spanbase);
+}
+
+@function pxtoem($px, $base: 16) {
+  @return ($px / $base) * 1em;
+}
+
+@function pxtorem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+$image-url-path: '/assets/' !default;
+
+@function imgurl($image) {
+  @if $rails {
+    @return image-url('#{$image}');
+  } @else {
+    @return url('#{$image-url-path}#{$image}');
+  }
+}
+
+@function getcolorposition($colorVar, $index) {
+  @return nth($colorVar, $index);
+}
+
+@function getcolor($colorVar, $index) {
+  @return getcolorposition($colorVar, $index + 1);
+}

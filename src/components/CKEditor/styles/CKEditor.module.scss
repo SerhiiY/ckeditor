@@ -1,0 +1,41 @@
+@import 'stylesheets/base/base';
+
+.ckeditorWrapper {
+  position: relative;
+  min-height: 320px;
+}
+
+.savingSpinner {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255,255,255,0.9);
+  bottom: 50px;
+  left: 50px;
+  z-index: 9999;
+  border-radius: 22px;
+  padding-right: 5px;
+  height: 44px;
+  padding-left: 5px;
+}
+
+.fetchingSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.backButton {
+  text-align: center;
+  margin: 0 auto 20px 0;
+  height: 40px;
+  padding: 0;
+  width: 190px;
+}
+
+.imageButton {
+  button {
+    height: 30px;
+  }
+}

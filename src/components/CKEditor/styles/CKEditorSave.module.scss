@@ -1,0 +1,27 @@
+.saveContainer {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  .saveButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 30px;
+    border: solid 1px #8d8d8d;
+    color: #8d8d8d;
+    background: #fff;
+    border-radius: 4px;
+    height: 40px;
+    width: 90px;
+
+    &:hover {
+      color: #666;
+      border-color: #666;
+    }
+  }
+}

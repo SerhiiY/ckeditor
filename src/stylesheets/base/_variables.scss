@@ -1,0 +1,231 @@
+$white: #fff;
+$black: #000;
+
+$transparent-grey: rgba($black, .32);
+
+$dark-sky-blue: #4a90e2;
+$light-sky-blue: #19b0da;
+$cornflower-blue: #6ea9e8; // Same as $dark-sky-blue + opacity .2
+$cornflower-blue2: #93c4e9;
+$darkish-blue: #00479a;
+$tropical-blue: #dbe9f9;
+$turquoise-blue: #60caea;
+$azure-blue: #3168a9;
+$azure-blue2: #009cff;
+$porcelain-blue: #e9edef;
+$polar-blue: #f5f9fd;
+$hippie-blue: #599ab4;
+$downy-blue: #6cbad2;
+$downy-blue2: #6abcd2;
+$swans-blue: #d8eaef;
+$humming-blue: #ceeff8;
+$twilight-blue: #f7feff;
+$seagull-blue: #7fcee6;
+$foam-blue: #d1f3fc;
+$squeeze-blue: #eef6f9;
+$link-water: #eff3fb;
+$pattens-blue: #e2f2ff;
+$spray-blue: #98dff3;
+
+$mineshaft: #3e3e3e;
+
+$silver: #c0c2c4;
+
+$nobel: #b6b6b6;
+$white-rock: #eae0d0;
+$white-lilac: #f5effb;
+$white-lilac2: #faf8fc;
+$white-ebb: #f2efef;
+$white-zircon: #fafcff;
+$white-catskill: #eef0f7;
+
+$tundora: #4e4e4e;
+
+$gray1: #f7f7f9;
+$gray2: #818181;
+$gray3: #8c8c8c;
+$gray4: #888;
+$gray5: #8d8d8d;
+$gray6: #8e8e8e;
+$gray8: #868181;
+$gray9: #b9b9b9;
+$gray11: #f9f9fa;
+$gray12: #bdbdbd;
+
+$dove-grey: #616161;
+$pale-grey: #f6f9fa;
+$warm-grey: #8b8b8b;
+
+$cape-cod: #484b4c;
+
+$mischka-grey: #dfd8e1;
+$blue-grey: #a8b7c5;
+$iron: #ced5da;
+
+$nasty-green: #66b13f;
+$apple-green: #4c872d;
+$mantis-green: #77c251;
+$emerald-green: #69ce81;
+$chateau-green: #4aaa61;
+$pastel-green: #6ce688;
+$algae-green: #97e2c7;
+$aquamarine-green: #53f4b9;
+$fruit-green: #4baa61;
+$narvik-green: #f4fbf6;
+
+$vermillion: #e03b13;
+$burntsienna: #eb5d5d;
+$deadline: #e2524a;
+$persimmon: #ff5454;
+$bittersweet: #ff6363;
+$salmon: #ff7c7c;
+$rose-white: #fff8f8;
+
+$greyish-brown: #464646;
+$fuzzy-wuzzy-brown: #c04f4f;
+
+$gorse-yellow: #fde844;
+$bridal-yellow: #fffcf6;
+$fuel-yellow: #f2a82e;
+$golden-yellow: #e49513;
+
+$anzac: #dd9444;
+$rajah: #f7c66c;
+$texasrose: #ffb04d;
+
+$victoria: #493c7c;
+$kimberly: #706396;
+
+$anakiwa: #6ee4ff;
+
+$trendy: #826b99;
+
+$purple: #896ca8;
+$prelude: #d8c6ea;
+$circle-gray: #d8d8d8;
+$linear-blue: #6bbfec;
+$lavender-purple: #9177ac;
+$lavender-purple2: #997cb8;
+$lavender-purple3: #a285c1;
+
+$bilobaflower: #c2a7e7;
+$bilobaflower2: #baa9ef;
+$picton-blue-light: #43d3fa;
+
+$marguerite: #8771cd; // $victoria + opacity .2
+$cerulean: #00aad8;
+$picton-blue: #44cbef;
+$picton-blue2: #36c7ee;
+$picton-blue3: #31bfe6;
+$shamrock: #2ad396;
+$pastelGreen: #67ee9c;
+$roman: #dd6c6c;
+$lavenderblush: #ffedf2;
+$emperor: #525252; // same as invision dove-gray
+$silverchalice: #9c9c9c;
+$java: #15aed8;
+$jungle-green: #2abe89;
+$minttulip: #c6e8f4;
+$bubbles: #e8fcff;
+$eastside: #ab91c7;
+$malibu: #6fe1ff;
+$malibu2: #7cdaf3;
+$selago: #f5effc;
+$prelude: #d8c7ea;
+$butterfly: #6654a1;
+$wisteria: #9e77be;
+$solitude: #e8f0fe;
+
+/*
+    [Color Map]
+    1.use getcolor($colorname, dec[Hex:0~15]) function get Color
+    2.use getcolorPosition($colorname, 1-16) function get Color
+    Example:
+      getcolor($mercury, 15);             // return #efefef;
+      getcolorPosition($mercury, 15);     // return #eeeeee;
+*/
+$mercury:   #e0e0e0, #e1e1e1, #e2e2e2, #e3e3e3,
+  #e4e4e4, #e5e5e5, #e6e6e6, #e7e7e7,
+  #e8e8e8, #e9e9e9, #eaeaea, #ebebeb,
+  #ececec, #ededed, #eee, #efefef;
+
+$silver-9:  #909090, #919191, #929292, #939393,
+  #949494, #959595, #969696, #979797,
+  #989898, #999, #9a9a9a, #9b9b9b,
+  #9c9c9c, #9d9d9d, #9e9e9e, #9f9f9f;
+
+$silver-a:  #a0a0a0, #a1a1a1, #a2a2a2, #a3a3a3,
+  #a4a4a4, #a5a5a5, #a6a6a6, #a7a7a7,
+  #a8a8a8, #a9a9a9, #aaa, #ababab,
+  #acacac, #adadad, #aeaeae, #afafaf;
+
+$silver-c:  #c0c0c0, #c1c1c1, #c2c2c2, #c3c3c3,
+  #c4c4c4, #c5c5c5, #c6c6c6, #c7c7c7,
+  #c8c8c8, #c9c9c9, #cacaca, #cbcbcb,
+  #ccc, #cdcdcd, #cecece, #cfcfcf;
+
+$alto:      #d0d0d0, #d1d1d1, #d2d2d2, #d3d3d3,
+  #d4d4d4, #d5d5d5, #d6d6d6, #d7d7d7,
+  #d8d8d8, #d9d9d9, #dadada, #dbdbdb,
+  #dcdcdc, #ddd, #dedede, #dfdfdf;
+
+$alabaster: #f0f0f0, #f1f1f1, #f2f2f2, #f3f3f3,
+  #f4f4f4, #f5f5f5, #f6f6f6, #f7f7f7,
+  #f8f8f8, #f9f9f9, #fafafa, #fbfbfb,
+  #fcfcfc, #fdfddf, #fefefe, $white;
+
+$editor: (
+  height: 1343px,
+  header: 143px,
+  footer: 110px,
+  article: 1090px
+);
+
+$zindex: (
+  header:   1000,
+  main:     1000,
+  nav:      1000,
+  section:  1000,
+  footer:   1000,
+  input:    1000,
+  modal:    1000,
+  product:  1000,
+  icon:     1,
+  bg:       -1
+);
+
+$breakpoint: (
+  xs: 575px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1201px
+);
+
+$container: (
+  xs: 480px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+$font-sans-serif-default: Helvetica, Arial, sans-serif;
+
+$font-serif-default: Times, Georgia, serif;
+
+/* icons-font-awesome */
+$fontawesome: 'FontAwesome';
+$font-fontawesome: $fontawesome, $font-sans-serif-default;
+
+/* sans-serif */
+$lato: 'Lato';
+$font-lato: $lato, $font-sans-serif-default;
+
+/* serif */
+$roboto-slab: 'Roboto Slab';
+$font-roboto-slab: $roboto-slab, $font-serif-default;
+
+/* Editor Content Font and Blockquote Font Family */
+$hoefler: 'Hoefler Text';
+$font-hoefler: $hoefler, $font-roboto-slab;

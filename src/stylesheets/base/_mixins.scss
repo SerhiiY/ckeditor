@@ -1,0 +1,124 @@
+@mixin box($background-color, $border-radius: 0) {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+}
+
+@mixin triangle($width, $height, $color, $is-reverse: false) {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: calc(#{$width} / 2) solid transparent;
+  border-right: calc(#{$width} / 2) solid transparent;
+  @if $is-reverse == true {
+    border-top: $height solid $color;
+  } @else {
+    border-bottom: $height solid $color;
+  }
+}
+
+@mixin circle($width, $height) {
+  content: '';
+  border-radius: 50%;
+  width: $width;
+  height: $height;
+}
+
+@mixin span($span, $spanbase: $base-columns) {
+  box-sizing: border-box;
+  width: percentage($span / $spanbase);
+  float: left;
+}
+
+@mixin rwd($range) {
+  @if $range==xs {
+    @media (max-width: map-get($breakpoint, xs)) { @content; }
+  }
+  @else if $range==sm {
+    @media (min-width: map-get($breakpoint, sm)) { @content; }
+  }
+  @else if $range==md {
+    @media (min-width: map-get($breakpoint, md)) { @content; }
+  }
+  @else if $range==lg {
+    @media (min-width: map-get($breakpoint, lg)) { @content; }
+  }
+  @else if $range==xl {
+    @media (min-width: map-get($breakpoint, xl)) { @content; }
+  }
+}
+
+@mixin centering-wrap() {
+  position: relative;
+}
+
+@mixin centering-mixin($scope: 'hv', $left: 50%, $top: 50%) {
+  position: absolute;
+
+  @if $scope=='h' {
+    left: $left;
+    transform: translateX((-$left));
+  }
+  @if $scope=='v' {
+    top: $top;
+    transform: translateY((-$top));
+  }
+  @if $scope=='hv' {
+    top: $top;
+    left: $left;
+    transform: translate((-$left), (-$top));
+  }
+}
+
+@mixin centering-horizontally($left: 50%) {
+  @include centering-mixin('h', $left);
+}
+
+@mixin centering-vertically($top: 50%) {
+  @include centering-mixin('v', 50%, $top);
+}
+
+@mixin centering($left: 50%, $top: 50%) {
+  @include centering-mixin('hv', $left, $top);
+}
+
+@mixin linear-progress($start-percentage: 0%, $end-percentage: 100%, $progress-color: rgba($dark-sky-blue, .2), $bg-color: $pale-grey, $direction: 'right') {
+  background: linear-gradient(to $direction, $progress-color $start-percentage, $bg-color $end-percentage);
+}
+
+@mixin loop-linear-progress($progress-color: rgba($dark-sky-blue, .2), $bg-color: $pale-grey, $sync: false) {
+  @for $i from 0 through 100 {
+    $start-percentage: 0%;
+    $end-percentage: percentage($i / 100);
+    &.progress-#{$i} {
+      @if ($sync==true) {
+        $start-percentage: $end-percentage;
+      }
+      @include linear-progress($start-percentage, $end-percentage, $progress-color, $bg-color);
+    }
+  }
+}
+
+@mixin detail_flex_helper($class, $minwidth: false, $flex-direction-column: false, $columns: $base-columns) {
+  //Flex helper
+  @for $i from 0 through $columns {
+    &.col#{$class}-#{$i} {
+      @if ($flex-direction-column==false) {
+        flex: 0 0 percentage(($i / $columns));
+      }
+      @if ($minwidth) {
+        min-width: percentage(($i / $columns));
+      }
+    }
+    @for $j from 1 through 9 {
+      &.col#{$class}-#{$i}-dot-#{$j} {
+        @if ($flex-direction-column==false) {
+          flex: 0 0 percentage(($i + (.1 * $j)) / $columns);
+        }
+        @if ($minwidth) {
+          min-width: percentage(($i + (.1 * $j)) / $columns);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.color-purple {
+  color: #896ca8 !important;
+}
+
+.color-grey {
+  color: #8d8d8d !important;
+}
+
+.bordered {
+  border: solid 3px #896ca8;
+  border-radius: 10px;
+}
+
+@each $num in (0, 5, 10, 15, 20, 30, 40, 50, 75, 100) {
+  .m-t-#{$num} {
+    margin-top: #{$num}px !important;
+  }
+  .m-b-#{$num} {
+    margin-bottom: #{$num}px !important;
+  }
+  .m-l-#{$num} {
+    margin-left: #{$num}px !important;
+  }
+  .m-r-#{$num} {
+    margin-right: #{$num}px !important;
+  }
+  .p-t-#{$num} {
+    padding-top: #{$num}px !important;
+  }
+  .p-b-#{$num} {
+    padding-bottom: #{$num}px !important;
+  }
+  .p-l-#{$num} {
+    padding-left: #{$num}px !important;
+  }
+  .p-r-#{$num} {
+    padding-right: #{$num}px !important;
+  }
+}
+
+@each $size in (10, 12, 14, 16, 18, 20, 24, 28, 32){
+  .f-s-#{$size} {
+    font-size: #{$size}px !important;
+  }
+}
+
+@each $weight in (200, 300, 400, 500, 600){
+  .f-w-#{$weight} {
+    font-weight: #{$weight} !important;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  max-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  pointer-events: none;
+  transition: all 0.3s linear, max-height 0.01s linear 0.3s;
+}
+
+.fade-in {
+  opacity: 1;
+  pointer-events: all;
+  max-height: auto;
+  overflow: hidden;
+  transition: all 0.3s linear, max-height 0.01s linear;
+}
+
+@each $pos in (right, left, center, flex-start, flex-end, stretch, space-between){
+  .content-#{$pos} {
+    justify-content: #{$pos} !important;
+  }
+}
+
+@each $pos in (right, left, center, flex-start, flex-end, stretch, space-between){
+  .items-#{$pos} {
+    align-items: #{$pos} !important;
+  }
+}
+
+
+@each $pos in (right, left, center){
+  .text-#{$pos} {
+    text-align: #{$pos} !important;
+  }
+}
+
+@each $el in (block, flex, inline, none){
+  .d-#{$el} {
+    display: #{$el} !important;
+  }
+}
+
+@each $el in (relative, absolute, fixed, sticky){
+  .pos-#{$el} {
+    position: #{$el} !important;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.events-none {
+  pointer-events: none;
+}
+
+.bg-spinner {
+  background-color: rgba(255,255,255,0.9);
+}
+
+.hidden {
+  display: none !important;
+  // opacity: 0;
+  // pointer-events: none;
+}

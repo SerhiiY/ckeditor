@@ -1,0 +1,270 @@
+%full-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+%pop-up-box-shadow {
+  box-shadow: 0 2px 6px 0 rgba($black, .5);
+}
+
+%text {
+  font-family: $font-lato;
+  font-size: 16px;
+  line-height: 1.88;
+  color: getcolor($silver-a, 5);
+  @extend %fw400;
+}
+
+%link-grey {
+  color: getcolor($silver-c, 2);
+  @extend %fw700, %none-underline;
+
+  &:hover {
+    color: getcolor($silver-a, 5);
+  }
+}
+
+%link-blue {
+  color: $turquoise-blue;
+  @extend %fw700, %none-underline;
+
+  &:hover {
+    color: $java;
+  }
+}
+
+%input {
+  color: $emperor;
+  border: solid 1px getcolor($mercury, 14);
+
+  &::placeholder {
+    color: getcolor($silver-a, 5);
+  }
+}
+
+%font-base {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: 'liga' on;
+}
+
+%fontawesome {
+  font-family: $font-fontawesome;
+  @extend %font-base;
+}
+
+%lato {
+  font-family: $font-lato;
+  @extend %font-base;
+}
+
+%robotoslab {
+  font-family: $font-roboto-slab;
+  @extend %font-base;
+}
+
+%fw100 {
+  font-weight: 100;
+}
+
+%fw200 {
+  font-weight: 200;
+}
+
+%fw300 {
+  font-weight: 300;
+}
+
+%fw400 {
+  font-weight: 400;
+}
+
+%fw500 {
+  font-weight: 500;
+}
+
+%fw600 {
+  font-weight: 600;
+}
+
+%fw700 {
+  font-weight: 700;
+}
+
+%fw800 {
+  font-weight: 800;
+}
+
+%fw900 {
+  font-weight: 900;
+}
+
+%h1 {
+  color: $purple;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  @extend %fw300, %robotoslab, %text-left;
+}
+
+%h2 {
+  color: $emperor;
+  font-size: 25px;
+  line-height: 1.4;
+  margin-bottom: 27px;
+  @extend %fw400, %robotoslab, %text-left;
+}
+
+%h3 {
+  color: $emperor;
+  font-size: 18px;
+  margin-bottom: 27px;
+  @extend %fw600, %lato, %text-left;
+}
+
+%h4 {
+  color: $marguerite;
+  font-size: 15px;
+  line-height: 1.73;
+  margin-bottom: 27px;
+  @extend %fw500, %lato, %text-left;
+}
+
+%h5 {
+  font-family: $font-lato;
+  font-size: 15px;
+  line-height: 1.73;
+  color: $emperor;
+  @extend %fw500;
+}
+
+%text-left {
+  text-align: left;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%text-right {
+  text-align: right;
+}
+
+%italic {
+  font-style: italic;
+}
+
+%underline {
+  text-decoration: underline;
+}
+
+%none-underline {
+  text-decoration: none;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+%lowercase {
+  text-transform: lowercase;
+}
+
+%text-vermillion {
+  color: $vermillion;
+}
+
+%text-marguerite {
+  color: $marguerite;
+}
+
+%text-green {
+  color: $nasty-green;
+}
+
+%none {
+  display: none;
+}
+
+%block {
+  display: block;
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+%container {
+  margin: 0 auto;
+  @media (max-width: map-get($breakpoint, xs)) { max-width: map-get($container, xs); }
+  @media (min-width: map-get($breakpoint, sm)) { max-width: map-get($container, sm); }
+  @media (min-width: map-get($breakpoint, md)) { max-width: map-get($container, md); }
+  @media (min-width: map-get($breakpoint, lg)) { max-width: map-get($container, lg); }
+  @media (min-width: map-get($breakpoint, xl)) { max-width: map-get($container, xl); }
+
+  &::after {
+    content: '\200B';
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+  }
+}
+
+%border-circle {
+  border-radius: 50%;
+}
+
+%border-box {
+  box-sizing: border-box;
+}
+
+%content-box {
+  box-sizing: content-box;
+}
+
+%flex {
+  display: flex;
+}
+
+%flex-row {
+  flex-flow: row wrap;
+  @extend %flex;
+}
+
+%flex-row-no-wrap {
+  flex-flow: row nowrap;
+  @extend %flex;
+}
+
+%flex-col {
+  flex-flow: column wrap;
+  @extend %flex;
+}
+
+%flex-col-no-wrap {
+  flex-flow: column nowrap;
+  @extend %flex;
+}
+
+%inline-flex {
+  display: inline-flex;
+}
+
+%inline-flex-row {
+  flex-flow: row wrap;
+  @extend %inline-flex;
+}
+
+%inline-flex-col {
+  flex-flow: column wrap;
+  @extend %inline-flex;
+}

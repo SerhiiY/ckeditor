@@ -1,0 +1,27 @@
+.tinymceData {
+  @each $el in (h1, h2, h3, h4, h5) {
+    #{$el} {
+      span {
+        all: unset;
+        @extend %#{$el};
+      }
+    }
+  }
+
+  a {
+    @extend %link-blue;
+    span {
+      @extend %link-blue;
+    }
+  }
+
+  td {
+    padding: 10px;
+    border: solid 1px #525252;
+  }
+  ol, ul {
+    li {
+      margin-left: 20px;
+    }
+  }
+}

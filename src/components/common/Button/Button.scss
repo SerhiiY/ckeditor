@@ -1,0 +1,318 @@
+@import '~stylesheets/base/base';
+
+$prefix: 'fe-editor';
+
+%#{$prefix}-btn {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  height: 52px;
+  line-height: 1.5;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+  @extend %lato, %fw900, %text-center;
+  width: auto;
+  min-width: 112px;
+  padding: 0 20px;
+
+  &.disabled {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+}
+
+%#{$prefix}-btn-primary {
+  @extend %#{$prefix}-btn;
+
+  border: solid 1px $shamrock;
+  background: $white;
+  color: $shamrock;
+
+  &:focus,
+  &:hover,
+  &.active {
+    background: $shamrock;
+    color: $white;
+  }
+}
+
+%#{$prefix}-btn-secondary {
+  @extend %#{$prefix}-btn;
+
+  border: 0;
+  background: linear-gradient(to right, $java, $picton-blue);
+  color: $white;
+
+  &:focus,
+  &:hover,
+  &.active {
+    background: $picton-blue;
+  }
+}
+
+%#{$prefix}-btn-tertiary {
+  @extend %#{$prefix}-btn;
+
+  border: solid 1px getcolor($alto, 14);
+  background: $white;
+  color: getcolor($silver-c, 2);
+
+  &:focus,
+  &:hover,
+  &.active {
+    background: $white;
+    border: solid 1px getcolor($silver-c, 2);
+    color: getcolor($silver-a, 5);
+  }
+}
+
+.#{$prefix}-btn-save {
+  @extend %#{$prefix}-btn-secondary;
+
+  margin-right: 15px;
+  color: $white;
+  background: $shamrock;
+
+  &:focus,
+  &:hover,
+  &.active {
+    background: $pastelGreen;
+  }
+}
+
+.#{$prefix}-btn-revision-request {
+  @extend .#{$prefix}-btn-save;
+}
+
+.#{$prefix}-btn-complete {
+  @extend %#{$prefix}-btn-secondary;
+}
+
+.#{$prefix}-btn-confirm {
+  @extend %#{$prefix}-btn-secondary;
+}
+
+.#{$prefix}-btn-cancel {
+  @extend %#{$prefix}-btn-tertiary;
+  margin-right: 15px;
+}
+
+.#{$prefix}-btn-ok {
+  @extend %#{$prefix}-btn-primary;
+}
+
+.#{$prefix}-btn-search-image {
+  @extend %#{$prefix}-btn-secondary;
+
+  height: 48px;
+  width: 48px;
+}
+
+.#{$prefix}-btn-cancel-insert-image {
+  @extend %#{$prefix}-btn-tertiary;
+  margin-right: 9px;
+  text-transform: uppercase;
+
+  &[disabled] {
+    border: solid 1px getcolor($alto, 14);
+    background: $white;
+    color: getcolor($silver-c, 2);
+  }
+}
+
+.#{$prefix}-btn-cancel-insert-caption {
+  @extend .#{$prefix}-btn-cancel-insert-image;
+}
+
+.#{$prefix}-btn-insert-image {
+  @extend %#{$prefix}-btn-secondary;
+
+  text-transform: uppercase;
+}
+
+.#{$prefix}-btn-insert-caption {
+  @extend .#{$prefix}-btn-insert-image;
+}
+
+.#{$prefix}-btn-remove-link {
+  @extend %#{$prefix}-btn-tertiary;
+
+  width: 82px;
+  margin-right: 9px;
+}
+
+.#{$prefix}-btn-apply-link {
+  @extend %#{$prefix}-btn-secondary;
+
+  width: 82px;
+}
+
+.#{$prefix}-btn-image-size-s {
+  @extend %#{$prefix}-btn-tertiary;
+
+  height: 26px;
+  width: 33px;
+}
+
+.#{$prefix}-btn-image-size-m {
+  @extend %#{$prefix}-btn-tertiary;
+
+  height: 26px;
+  width: 48px;
+}
+
+.#{$prefix}-btn-image-size-l {
+  @extend %#{$prefix}-btn-tertiary;
+
+  height: 26px;
+  width: 69px;
+}
+
+%#{$prefix}-btn-image-align {
+  @extend %#{$prefix}-btn;
+
+  border: 0;
+  background: $white;
+  color: $emperor;
+
+  &:focus,
+  &:hover,
+  &.active {
+    background: $white;
+    color: $java;
+  }
+
+  font-weight: normal;
+  height: 26px;
+  text-align: left;
+}
+
+.#{$prefix}-btn-image-align-left {
+  @extend %#{$prefix}-btn-image-align;
+
+  width: 33px;
+}
+
+.#{$prefix}-btn-image-align-center {
+  @extend %#{$prefix}-btn-image-align;
+
+  width: 48px;
+}
+
+.#{$prefix}-btn-image-align-right {
+  @extend %#{$prefix}-btn-image-align;
+
+  width: 69px;
+}
+
+.#{$prefix}-btn-post-comment {
+  @extend %#{$prefix}-btn-secondary;
+
+  font-size: 13px;
+  width: 76px;
+  height: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+%#{$prefix}-abtn {
+  @extend %#{$prefix}-btn-secondary, %uppercase;
+
+  font-size: 15px;
+  width: auto;
+  height: pxtoem(50, 15);
+  vertical-align: middle;
+  padding: 0 pxtoem(18, 15);
+  border: 1px solid currentColor;
+
+  &[disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+}
+
+.#{$prefix}-abtn {
+  &-edit,
+  &-cancel,
+  &-approve,
+  &-approved {
+    @extend %#{$prefix}-abtn;
+  }
+
+  &-edit,
+  &-cancel {
+    color: $shamrock;
+    border-color: currentColor;
+    background: transparent;
+    margin-right: 12px;
+
+    &:hover {
+      color: $shamrock;
+      border-color: currentColor;
+      background: transparent;
+    }
+  }
+
+  &-edit {
+    min-width: 86px;
+  }
+
+  &-cancel {
+    min-width: 107px;
+  }
+
+  &-approve,
+  &-approved {
+    min-width: 199px;
+    color: $white;
+    border-color: transparent;
+    border-width: 0;
+    padding: 0;
+    transition: background .5s cubic-bezier(.17, .67, .83, .67);
+  }
+
+  &-approve {
+    background: linear-gradient(to right, $java, $picton-blue);
+
+    &:focus,
+    &:hover,
+    &.active {
+      background: linear-gradient(to right, $picton-blue, $picton-blue);
+    }
+  }
+
+  &-approved {
+    line-height: 50px;
+    background: linear-gradient(to right, #2fd498, $picton-blue);
+
+    &:focus,
+    &:hover,
+    &.active {
+      background: linear-gradient(to right, #2fd498, $picton-blue);
+    }
+
+    span {
+      animation: approvedTextAnimate .5s linear;
+    }
+
+    &.disabled,
+    &[disabled] {
+      opacity: 1;
+    }
+
+    svg {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-bottom: -5px;
+    }
+
+    path {
+      stroke: $white;
+      stroke-dasharray: 30;
+      opacity: 1;
+      animation: approvedAnimate .5s cubic-bezier(.17, .67, .83, .67);
+    }
+  }
+}

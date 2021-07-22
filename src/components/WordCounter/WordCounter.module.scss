@@ -1,0 +1,94 @@
+@import '~stylesheets/base/base';
+
+#default {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  vertical-align: top;
+  margin: 0;
+
+  &:only-child {
+    margin-right: pxtoem(0);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 68px;
+    margin: 0;
+  }
+
+  .circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+
+    svg {
+      max-width: 45px;
+      max-height: 45px;
+    }
+  }
+
+  .background-circle {
+    fill: none;
+    stroke: getcolor($mercury, 14);
+  }
+
+  .dynamic-circle {
+    fill: transparent;
+    stroke: $marguerite;
+    transform-origin: center;
+    transform: rotateZ(-90deg);
+    transition: stroke-dashoffset 300ms ease-in-out;
+  }
+
+  .counter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 0 pxtoem(13, 26);
+    white-space: pre;
+    @extend %fw300, %text-left;
+
+    .words {
+      font-size: 26px;
+      color: $emperor;
+      @extend %fw300, %uppercase, %text-left;
+    }
+
+    .text {
+      font-size: 11px;
+      color: getcolor($silver-c, 2);
+      padding: pxtoem(11, 11) pxtoem(5, 11) 0;
+      @extend %fw600, %uppercase, %text-left;
+    }
+  }
+}
+
+// bouncy Style
+.bouncy {
+  .circles {
+    .dynamic-circle {
+      transition: stroke-dashoffset 300ms cubic-bezier(.87, -.41, .19, 1.44);
+    }
+  }
+}
+
+// Alert Style
+.alert {
+  .circles {
+    .dynamic-circle {
+      stroke: $vermillion;
+    }
+  }
+
+  .words {
+    color: $vermillion;
+  }
+}

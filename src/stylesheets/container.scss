@@ -1,0 +1,26 @@
+.reactContainer {
+  padding: 30px;
+
+  h1 {
+    @extend %h1;
+  }
+
+  h2 {
+    @extend %h2;
+  }
+  
+  h1,
+  h2 {
+    * {
+      font-family: $font-roboto-slab; // need * selector to override Rails global css style
+    }
+  }
+
+  h3 {
+    @extend %h3;
+  }
+
+  h4 {
+    @extend %h4;
+  }
+}
