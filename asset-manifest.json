@@ -1,8 +1,8 @@
 {
   "files": {
     "main.scss": "/ckeditor/static/css/main.600d1eeb.chunk.scss",
-    "main.js": "/ckeditor/static/js/main.aa93568a.chunk.js",
-    "main.js.map": "/ckeditor/static/js/main.aa93568a.chunk.js.map",
+    "main.js": "/ckeditor/static/js/main.2143ffa3.chunk.js",
+    "main.js.map": "/ckeditor/static/js/main.2143ffa3.chunk.js.map",
     "runtime-main.js": "/ckeditor/static/js/runtime-main.7b4648ea.js",
     "runtime-main.js.map": "/ckeditor/static/js/runtime-main.7b4648ea.js.map",
     "static/css/2.dc2a838b.chunk.scss": "/ckeditor/static/css/2.dc2a838b.chunk.scss",
@@ -24,6 +24,6 @@
     "static/css/2.dc2a838b.chunk.scss",
     "static/js/2.551331fb.chunk.js",
     "static/css/main.600d1eeb.chunk.scss",
-    "static/js/main.aa93568a.chunk.js"
+    "static/js/main.2143ffa3.chunk.js"
   ]
 }
