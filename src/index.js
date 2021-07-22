@@ -8,5 +8,5 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-	document.getElementById(process.env.NODE_ENV === 'production' ? 'react-content' : 'root')
+	document.getElementById('root')
 );
