@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.scss": "/ckeditor/static/css/main.600d1eeb.chunk.scss",
+    "main.js": "/ckeditor/static/js/main.aa93568a.chunk.js",
+    "main.js.map": "/ckeditor/static/js/main.aa93568a.chunk.js.map",
+    "runtime-main.js": "/ckeditor/static/js/runtime-main.7b4648ea.js",
+    "runtime-main.js.map": "/ckeditor/static/js/runtime-main.7b4648ea.js.map",
+    "static/css/2.dc2a838b.chunk.scss": "/ckeditor/static/css/2.dc2a838b.chunk.scss",
+    "static/js/2.551331fb.chunk.js": "/ckeditor/static/js/2.551331fb.chunk.js",
+    "static/js/2.551331fb.chunk.js.map": "/ckeditor/static/js/2.551331fb.chunk.js.map",
+    "index.html": "/ckeditor/index.html",
+    "static/js/2.551331fb.chunk.js.LICENSE.txt": "/ckeditor/static/js/2.551331fb.chunk.js.LICENSE.txt",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/ckeditor/static/media/fontawesome-webfont.1e59d233.ttf",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/ckeditor/static/media/fontawesome-webfont.20fd1704.woff2",
+    "static/media/fontawesome-webfont.eot": "/ckeditor/static/media/fontawesome-webfont.8b43027f.eot",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/ckeditor/static/media/fontawesome-webfont.c1e38fd9.svg",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/ckeditor/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/pencil-icon-focus.svg": "/ckeditor/static/media/pencil-icon-focus.fe1185ea.svg",
+    "static/media/pencil-icon.svg": "/ckeditor/static/media/pencil-icon.c8f264fa.svg",
+    "static/media/warning-material.d8aba439.svg": "/ckeditor/static/media/warning-material.d8aba439.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b4648ea.js",
+    "static/css/2.dc2a838b.chunk.scss",
+    "static/js/2.551331fb.chunk.js",
+    "static/css/main.600d1eeb.chunk.scss",
+    "static/js/main.aa93568a.chunk.js"
+  ]
+}
